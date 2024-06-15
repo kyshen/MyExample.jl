@@ -1,9 +1,2 @@
-using MyExample
-using Test
-
-@testset "MyExample.jl" begin
-    # Write your tests here.
-    @test my_f(2,1) == 7
-    @test my_f(2,3) == 13
-    @test my_f(2,3) == 11
-end
+using SafeTestsets
+@safetestset "My f rests" begin include("my_f_tests.jl") end
